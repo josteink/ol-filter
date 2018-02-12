@@ -10,9 +10,9 @@
 let startTime = new Date().getTime();
 
 /* filters */
-let elementTypes = ["a", "p", "h1", "h2", "h3"];
-let filters = ["Vancouver", "\\bOL(-?)\\b", "Northug"];
-let blockedUrls = ["/sport/", "/ol/", "http://ol."];
+let elementTypes = ["a", "p", "h1", "h2", "h3", "article"];
+let filters = ["\\bOL(-?)\\b", "Northug"];
+let blockedUrls = ["/sport/", "/ol/", "https://ol.", "/100Sport/", "studio=vinter-ol", "ol2018", "https://www.dagbladet.no/sport", "-ol-studio-"];
 
 /* glow settings */
 let opacity = 0.15; // 1 = 100%
@@ -98,7 +98,7 @@ function processLinks(nodes) {
 function registerElement(element) {
     // ignore hidden elements
     if (element.style.display !== "none") {
-        if (element.nodeName !== "DIV" && element.nodeName !== "UL") {
+        if (element.nodeName !== "DIV" && element.nodeName !== "UL" && element.nodeName !== "ARTICLE") {
             let parent = element.parentNode;
 
             if (parent !== NaN) {
