@@ -17,7 +17,7 @@
                 "https://www.nrk.no/*"
             ],
             "js": [
-                "dist/extensionLoader.js"
+                "src/extensionInjector.js"
             ],
             "run_at": "document_end"
         }
