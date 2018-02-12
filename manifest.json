@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "OL filter",
+    "short_name": "ol-filter",
+    "version": "1.0",
+    "author": "Jostein Kjønigsen",
+
+    "description": "Kvitt deg med irriterende OL-nyheter på norske nett-aviser.",
+
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.aftenposten.no/*",
+                "https://www.dagbladet.no/*",
+                "https://www.nettavisen.no/*",
+                "https://www.vg.no/*",
+                "https://www.nrk.no/*"
+            ],
+            "js": [
+                "dist/extensionLoader.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}

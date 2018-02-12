@@ -1,0 +1,20 @@
+{
+  "name": "ol-filter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "source/app.js",
+  "scripts": {
+    "deps": "npm install",
+      "tsc": "tsc",
+      "tslint": "tslint src/*.ts",
+      "build": "npm run tsc && npm run tslint"
+  },
+  "author": "Jostein Kjønigsen",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chrome": "0.0.59",
+    "@types/node": "^9.4.5",
+    "typescript": "^2.7.1"
+  }
+}

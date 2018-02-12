@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "noImplicitThis": false,
+    "strictNullChecks": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es2015",
+    "module": "commonjs"
+  },
+  "exclude": [
+    "node_modules",
+    "bin",
+    "dist"
+  ]
+}
