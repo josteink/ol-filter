@@ -5,9 +5,10 @@
   "main": "source/app.js",
   "scripts": {
     "deps": "npm install",
-      "tsc": "tsc",
-      "tslint": "tslint src/*.ts",
-      "build": "npm run tsc && npm run tslint"
+    "tsc": "tsc",
+    "tslint": "tslint src/*.ts",
+    "web-ext": "web-ext build --overwrite-dest",
+    "build": "npm run tsc && npm run tslint && npm run web-ext"
   },
   "author": "Jostein Kjønigsen",
   "license": "ISC",
@@ -15,6 +16,7 @@
   "devDependencies": {
     "@types/chrome": "0.0.59",
     "@types/node": "^9.4.5",
-    "typescript": "^2.7.1"
+    "typescript": "^2.7.1",
+    "web-ext": "^2.4.0"
   }
 }
