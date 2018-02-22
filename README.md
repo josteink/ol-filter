@@ -9,7 +9,11 @@ ut OL og/eller sports-innhold fra norske dagsaviser.
 
 For øyeblikket ikke pakket og publisert i noen WebStore/AppStore.
 
-## bruk
+## installasjon - firefox
+
+Last ned fra [addon.mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/ol-filter/).
+
+## installasjon - chrome
 
 Kjør følgende i en terminal:
 
