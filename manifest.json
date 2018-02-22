@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "OL filter",
     "short_name": "ol-filter",
-    "version": "1.0",
+    "version": "1.0.1",
     "author": "Jostein Kjønigsen",
 
     "description": "Kvitt deg med irriterende OL-nyheter på norske nett-aviser.",
