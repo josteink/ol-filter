@@ -8,7 +8,9 @@
     "tsc": "tsc",
     "tslint": "tslint src/*.ts",
     "web-ext": "web-ext build --overwrite-dest",
-    "build": "npm run tsc && npm run tslint && npm run web-ext"
+    "web-ext-signed": "web-ext sign",
+    "build": "npm run tsc && npm run tslint && npm run web-ext",
+    "build-signed": "npm run tsc && npm run tslint && npm run web-ext-signed"
   },
   "author": "Jostein Kjønigsen",
   "license": "ISC",
