@@ -18,8 +18,8 @@
   "dependencies": {},
   "devDependencies": {
     "@types/chrome": "0.0.88",
-    "@types/node": "^9.4.5",
-    "typescript": "^2.7.1",
-    "web-ext": "^2.4.0"
+    "@types/node": "9.6.51",
+    "typescript": "2.9.2",
+    "web-ext": "2.9.3"
   }
 }
