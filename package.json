@@ -19,7 +19,7 @@
   "devDependencies": {
     "@types/chrome": "0.0.88",
     "@types/node": "9.6.51",
-    "typescript": "2.9.2",
+    "typescript": "3.5.3",
     "web-ext": "2.9.3"
   }
 }
