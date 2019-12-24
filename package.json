@@ -20,6 +20,6 @@
     "@types/chrome": "0.0.91",
     "@types/node": "9.6.55",
     "typescript": "3.7.4",
-    "web-ext": "3.2.1"
+    "web-ext": "4.0.0"
   }
 }
