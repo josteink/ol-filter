@@ -48,17 +48,21 @@ processLinks(links);
 /*  process nodes */
 
 let numNodes = elements.length;
-detectNodeDepth();
-elements.sort(depthFirstSort);
-let maxDepth = elements[0].getAttribute("TF_treedepth");
-let numEliminated = eliminateChildren();
+let maxDepth = 0;
+let numEliminated = 0;
 
-/* hide nodes */
+if (numNodes !== 0) {
+    detectNodeDepth();
+    elements.sort(depthFirstSort);
+    maxDepth = elements[0].getAttribute("TF_treedepth");
+    numEliminated = eliminateChildren();
 
-foreach(elements, function (node) {
-    setGlow(node);
-});
+    /* hide nodes */
 
+    foreach(elements, function (node) {
+        setGlow(node);
+    });
+}
 
 let endTime = new Date().getTime();
 let time = endTime - startTime;
