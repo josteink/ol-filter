@@ -25,22 +25,15 @@ let debug = "";
 
 /* setup code */
 
-let blockedUrlRxs = new Array();
-for (let e = 0; e < blockedUrls.length; e++) {
-    blockedUrlRxs[e] = new RegExp(blockedUrls[e]);
-}
-
-let filterRxs = new Array();
-for (let e = 0; e < filters.length; e++) {
-    filterRxs[e] = new RegExp(filters[e], "mi");
-}
+let blockedUrlRxs = blockedUrls.map(i => new RegExp(i));
+let filterRxs = filters.map(i => new RegExp(i, "mi"));
 
 /* identify nodes */
 
-foreach(elementTypes, function (elementType) {
+for (let elementType of elementTypes) {
     let elementNodes = document.getElementsByTagName(elementType);
     processElements(elementNodes);
-});
+}
 
 let links = document.getElementsByTagName("a");
 processLinks(links);
@@ -59,9 +52,9 @@ if (numNodes !== 0) {
 
     /* hide nodes */
 
-    foreach(elements, function (node) {
+    for (let node in elements) {
         setGlow(node);
-    });
+    }
 }
 
 let endTime = new Date().getTime();
@@ -76,27 +69,27 @@ basicDiagnostics();
 /* identification functions */
 
 function processFilter(dataNodes, filterNodes, propertyExtractor) {
-    foreach(dataNodes, function (dataNode) {
+    for (let dataNode of dataNodes) {
         let match = false;
         let property = propertyExtractor(dataNode);
 
-        foreach(filterNodes, function (filterNode) {
+        for (let filterNode of filterNodes) {
             match = match || property.match(filterNode) != null;
-        });
+        }
 
         if (match !== false) {
             debug += property + "\r\n";
             registerElement(dataNode);
         }
-    });
+    }
 }
 
 function processElements(nodes) {
-    processFilter(nodes, filterRxs, function (node) { return node.textContent; });
+    processFilter(nodes, filterRxs, node => node.textContent);
 }
 
 function processLinks(nodes) {
-    processFilter(nodes, blockedUrlRxs, function (node) { return node.href; });
+    processFilter(nodes, blockedUrlRxs, node => node.href);
 }
 
 function registerElement(element) {
@@ -183,7 +176,7 @@ function doProcess(e, current) {
 /* node cleanup */
 
 function detectNodeDepth() {
-    foreach(elements, function (node) {
+    for (let node of elements) {
         let depth = 0;
         let parentNode = node;
 
@@ -193,7 +186,7 @@ function detectNodeDepth() {
         }
 
         node.setAttribute("TF_treeDepth", depth);
-    });
+    }
 }
 
 function depthFirstSort(an, bn) {
@@ -266,11 +259,4 @@ function outputDebugInfo() {
     preElement.appendChild(debugContent);
     debugElement.appendChild(preElement);
     document.getElementsByTagName("body")[0].appendChild(debugElement);
-}
-
-function foreach(nodes, fn) {
-    for (let i = 0; i < nodes.length; i++) {
-        let node = nodes[i];
-        fn(node);
-    }
 }
