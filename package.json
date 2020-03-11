@@ -19,7 +19,7 @@
   "devDependencies": {
     "@types/chrome": "0.0.99",
     "@types/node": "9.6.55",
-    "tslint": "5.20.1",
+    "tslint": "6.1.0",
     "typescript": "3.8.3",
     "web-ext": "4.1.0"
   }
