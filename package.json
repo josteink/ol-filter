@@ -21,6 +21,6 @@
     "@types/node": "9.6.56",
     "tslint": "6.1.2",
     "typescript": "3.9.5",
-    "web-ext": "4.2.0"
+    "web-ext": "4.3.0"
   }
 }
