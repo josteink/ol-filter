@@ -20,7 +20,7 @@
     "@types/chrome": "0.0.117",
     "@types/node": "9.6.56",
     "tslint": "6.1.2",
-    "typescript": "3.9.5",
+    "typescript": "3.9.6",
     "web-ext": "4.3.0"
   }
 }
