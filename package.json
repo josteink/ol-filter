@@ -17,7 +17,7 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "@types/chrome": "0.0.118",
+    "@types/chrome": "0.0.119",
     "@types/node": "9.6.56",
     "tslint": "6.1.2",
     "typescript": "3.9.6",
