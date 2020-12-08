@@ -1,5 +1,6 @@
 
 # ol-filter
+![CI](https://github.com/josteink/ol-filter/workflows/CI/badge.svg)
 
 Hvis du leser denne siden, så vet du sannsynligvis allerede hva du er
 ute etter.
