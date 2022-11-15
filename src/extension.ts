@@ -98,7 +98,7 @@ function registerElement(element) {
         if (element.nodeName !== "DIV" && element.nodeName !== "UL" && element.nodeName !== "ARTICLE") {
             let parent = element.parentNode;
 
-            if (parent !== NaN) {
+            if (parent) {
                 registerElement(parent);
             }
         }
