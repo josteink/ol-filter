@@ -18,7 +18,7 @@
   "dependencies": {},
   "devDependencies": {
     "@types/chrome": "0.0.251",
-    "@types/node": "20.9.1",
+    "@types/node": "20.9.2",
     "tslint": "6.1.3",
     "typescript": "5.2.2",
     "web-ext": "7.8.0"
